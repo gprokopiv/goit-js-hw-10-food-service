@@ -1,4 +1,10 @@
 import './styles.css';
-import cardsEl from './menu.json';
-import foodMenuTml from './template.hbs';
-import themeSwitcher from './switch-toggle';
+import menuData from './js/menu.json';
+import template from './menu.hbs';
+
+const menuRef = document.querySelector('.js-menu');
+const markup = template(menuData);
+menuRef.insertAdjacentHTML('afterbegin', markup);
+
+
+
